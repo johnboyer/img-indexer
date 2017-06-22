@@ -28,7 +28,7 @@ public interface ElasticsearchContext {
 	/**
 	 * AWS ES endpoint URL
 	 */
-	public static final String ENDPOINT = "https://search-movies-lghaxmaw3m4vwsupglbcuijyui.us-west-2.es.amazonaws.com";
+	public static final String ENDPOINT = "https://search-my-domain-xxxxx.us-west-2.es.amazonaws.com";
 	/**
 	 * Bulk upload command line format
 	 */
