@@ -1,7 +1,7 @@
 # img-indexer
 
 ## Overview
-The **Image Indexer** is a standalone Java application that downloads photo metadata from the Flickr API and uploads it to AWS Elasticsearch (ES). 
+The **Image Indexer** is a standalone sample Java application that downloads photo metadata from the Flickr API and uploads it to AWS Elasticsearch (ES) index.
 
 It downloads metadata for the following places around the world:
 
