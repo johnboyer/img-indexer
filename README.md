@@ -29,15 +29,17 @@ After it completes downloading, it writes an AWS ES index entry to a JSON file f
 ![Seattle Skyline](https://farm5.static.flickr.com/4211/34364073364_e1ed834920_n.jpg)
 
 ## Usage
-Build the project, generate the JSON files, and upload them to AWS ES.
+1. Create and configure an AWS ES domain. Learn more [here](http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-createupdatedomains.html).
+2. Update the endpoint in `me.johnboyer.image.tools.ElasticsearchContext`, e.g., `ENDPOINT = https://search-movies-4f3nw7eiia2xiynjr55a2nao2y.us-west-1.es.amazonaws.com`
+3. Signup for Flickr API keys at https://www.flickr.com/services/api
+5. Update the `flickr.properties` file at `src/main/java`.
+6. Build the project, generate the JSON files, and upload them to AWS ES.
 
-	gradle build
-	java -jar build/libs/img-indexer-1.0-alpha1.jar generate
-	java -jar build/libs/img-indexer-1.0-alpha1.jar upload
+		gradle build
+		java -jar build/libs/img-indexer-1.0-alpha1.jar generate
+		java -jar build/libs/img-indexer-1.0-alpha1.jar upload
 	
-Note: In order for the upload command to work properly the AWS ES endpoint must be valid in `me.johnboyer.image.tools.ElasticsearchContext` and the user must have access to it. See [Getting Started with AWS ES Service Domains](http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-gsg-configure-access.html).
-
-After the upload command has completed, login into AWS ES. In the dashboard, click the *domain* > Indices > flickr and review the `photo` mappings.
+7. After the upload command has completed, login into AWS ES. In the dashboard, click the *domain* > Indices > flickr and review the `photo` mappings.
 
 ## License
 This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
